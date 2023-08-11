@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - sielert.com
+  resources:
+  - debugcontainers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sielert.com
+  resources:
+  - debugcontainers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - sielert.com
+  resources:
+  - debugcontainers/status
+  verbs:
+  - get
+  - patch
+  - update

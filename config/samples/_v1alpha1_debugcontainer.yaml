@@ -1,0 +1,13 @@
+apiVersion: sielert.com/v1alpha1
+kind: DebugContainer
+metadata:
+  labels:
+    app.kubernetes.io/name: debugcontainer
+    app.kubernetes.io/instance: debugcontainer-sample
+    app.kubernetes.io/part-of: dbg-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: dbg-operator
+  name: debugcontainer-sample
+spec:
+  foo: bar
+
